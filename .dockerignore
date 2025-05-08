@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pkl
+*.db
+*.log
+*.csv
+venv/
+results/
+optuna_study.db
+.DS_Store

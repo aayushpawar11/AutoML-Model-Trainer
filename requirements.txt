@@ -44,3 +44,4 @@ matplotlib
 seaborn
 flask
 joblib
+plotly

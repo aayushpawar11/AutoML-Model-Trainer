@@ -8,7 +8,7 @@ def main(csv_path):
     X_transformed = preprocessor.fit_transform(X)
 
     print("[INFO] Running model search with Optuna...")
-    best_model, best_trial = run_optuna(X_transformed, y)
+    best_model, best_trial, study = run_optuna(X_transformed, y)
 
     print("[INFO] Saving the best model...")
     save_model(best_model, "best_model.pkl")

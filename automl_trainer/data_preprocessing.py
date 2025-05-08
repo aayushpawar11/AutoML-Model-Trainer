@@ -2,9 +2,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
-def load_and_preprocess(file_path):
-    df = pd.read_csv(file_path)
-
+def load_and_preprocess(df):  # ✅ now takes a DataFrame directly
     X = df.iloc[:, :-1]
     y = df.iloc[:, -1]
 

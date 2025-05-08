@@ -1,0 +1,11 @@
+age,income,education,gender,purchased
+25,50000,Bachelor,Male,No
+30,60000,Master,Female,Yes
+22,30000,Bachelor,Female,No
+35,80000,PhD,Male,Yes
+28,52000,Master,Male,No
+40,90000,PhD,Female,Yes
+23,45000,Bachelor,Male,No
+36,82000,Master,Female,Yes
+29,58000,Bachelor,Female,No
+33,75000,PhD,Male,Yes

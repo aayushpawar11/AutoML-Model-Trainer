@@ -1,0 +1,12 @@
+# render.yaml
+services:
+  - type: web
+    name: automl-trainer
+    env: docker
+    plan: free
+    region: oregon
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000

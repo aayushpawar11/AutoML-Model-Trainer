@@ -11,7 +11,7 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port for Flask
-EXPOSE 5000
+EXPOSE 8000
 
 # Run Flask app
-CMD ["python", "app.py"]
+CMD ["sh", "-c", "streamlit run streamlit_app.py --server.port 8000 --server.address 0.0.0.0"]

@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import requests
 import pandas as pd
@@ -11,10 +12,8 @@ uploaded_file = st.file_uploader("Upload your CSV", type=["csv"])
 if uploaded_file:
     with st.spinner("Training... please wait ⏳"):
         # Send the file to your Flask API
-        response = requests.post(
-            "http://localhost:5050/train",
-            files={"file": uploaded_file}
-        )
+        API_URL = os.getenv("API_URL", "http://localhost:5050/train")
+        response = requests.post(API_URL, files={"file": uploaded_file})
 
     if response.ok:
         result = response.json()

@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 import pandas as pd
 from automl_trainer.data_preprocessing import load_and_preprocess
@@ -29,5 +30,6 @@ def train():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+PORT = int(os.environ.get("PORT", 5050))
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5050, debug=True)
+    app.run(host="0.0.0.0", port=PORT)

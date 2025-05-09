@@ -45,3 +45,5 @@ seaborn
 flask
 joblib
 plotly
+streamlit
+
